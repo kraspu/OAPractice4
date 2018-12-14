@@ -40,15 +40,15 @@ public class Group {
     }
   }
 
-  public String enterName(){
+  private String enterName(){
     System.out.println("FirstName: ");
     return sc.nextLine();
   }
-  public String enterSurname(){
+  private String enterSurname(){
     System.out.println("LastName: ");
     return sc.nextLine();
   }
-  public int enterAge(){
+  private int enterAge(){
     System.out.println("LastName: ");
     return sc.nextInt();
   }
