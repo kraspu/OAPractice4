@@ -49,7 +49,7 @@ public class Group {
     return sc.nextLine();
   }
   private int enterAge(){
-    System.out.println("LastName: ");
+    System.out.println("Age: ");
     return sc.nextInt();
   }
 
