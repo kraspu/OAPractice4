@@ -16,24 +16,41 @@ public class Group {
   public Group() throws MyException {
 
     System.out.println("Enter the name of new the Group: ");
-    setGroupName(sc.next());
+    setGroupName(sc.nextLine());
 
     do {
       System.out.println("Enter new student's: ");
-      System.out.print("FirstName: ");
-      String fn = sc.next();
-      System.out.print("LastName: ");
-      String ln = sc.next();
-      System.out.print("Age: ");
-      int ag = sc.nextInt();
+
+      String fn = enterName();
+
+      String ln = enterSurname();
+
+      int ag = enterAge();
+
       studGroup.add(new Student(fn,ln,ag));
-      System.out.print("To continue enter any symbol(to exit press 'q'): ");
+
+      System.out.println("To continue enter any symbol(to exit press 'q'): ");
+
       ch = sc.next().charAt(0);
+
     } while (ch != 'q');
 
     for (Student gr : studGroup) {
       System.out.println(gr.toString());
     }
+  }
+
+  public String enterName(){
+    System.out.println("FirstName: ");
+    return sc.nextLine();
+  }
+  public String enterSurname(){
+    System.out.println("LastName: ");
+    return sc.nextLine();
+  }
+  public int enterAge(){
+    System.out.println("LastName: ");
+    return sc.nextInt();
   }
 
   public String getGroupName() {
